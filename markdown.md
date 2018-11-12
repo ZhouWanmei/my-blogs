@@ -60,7 +60,11 @@
 
 引用一段代码，在三个反引号后面说明语言类型，如：
 
-![img](file:///C:\Users\周万美\AppData\Roaming\Tencent\Users\1733689912\QQ\WinTemp\RichOle\LVY9%SS9L3YJ$MP0MIF0J$N.png) 
+```
+​```javascript
+var a=10;
+​```
+```
 
 ```javascript
 var a=10;
@@ -68,10 +72,21 @@ var a=10;
 
 ##链接 
 
-![img](file:///C:\Users\周万美\AppData\Roaming\Tencent\Users\1733689912\QQ\WinTemp\RichOle\WB{1@NPHMA}FLME1}DZ6}LR.png) 
+```
+[链接到百度](https://www.baidu.com "百度")
+```
+
 [链接到百度](https://www.baidu.com "百度")
 
-![img](file:///C:\Users\周万美\AppData\Roaming\Tencent\Users\1733689912\QQ\WinTemp\RichOle\%ZOW8@N7IL8HGK_91P~G]CR.png) 
+```
+我经常去的几个网站[GitHub][1]、[知乎][2]以及[简书][3]
+[简书][3]是一个不错的[写作社区][]。
+
+[1]:https://github.com "GitHub"
+[2]:https://www.zhihu.com "知乎"
+[3]:http://www.jianshu.com "简书"
+[写作社区]:http://www.jianshu.com
+```
 
 我经常去的几个网站[GitHub][1]、[知乎][2]以及[简书][3]
 [简书][3]是一个不错的[写作社区][]。
@@ -90,7 +105,14 @@ var a=10;
 
 可以使用*,+,-或者数字作为列表的关键字
 
-![img](file:///C:\Users\周万美\AppData\Roaming\Tencent\Users\1733689912\QQ\WinTemp\RichOle\%YIIIVY3VT3GSIQSAZK2G7J.png) 
+```
+- 主列表1
+- 主列表2
+    1. 次列表1
+    2. 次列表2
+* 主列表3
++ 主列表4
+```
 
 - 主列表1
 - 主列表2
