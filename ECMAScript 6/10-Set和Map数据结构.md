@@ -161,7 +161,7 @@ Set 结构的实例有四个遍历方法，可以用于遍历成员。
 
 需要特别指出的是，`Set`的遍历顺序就是插入顺序。这个特性有时非常有用，比如使用 Set 保存一个回调函数列表，调用时就能保证按照添加顺序调用。
 
-**（3.1）keys()，values()，entries()**
+#### **（3.1）keys()，values()，entries()**
 
 `keys`方法、`values`方法、`entries`方法返回的都是遍历器对象（详见《Iterator 对象》一章）。由于 Set 结构没有键名，只有键值（或者说键名和键值是同一个值），所以`keys`方法和`values`方法的行为完全一致。
 
@@ -212,7 +212,7 @@ for (let x of set) {
 // blue
 ```
 
-**（3.2）forEach()**
+#### **（3.2）forEach()**
 
 Set 结构的实例与数组一样，也拥有`forEach`方法，用于对每个成员执行某种操作，没有返回值。
 
@@ -228,7 +228,7 @@ set.forEach((value, key) => console.log(key + ' : ' + value))
 
 另外，`forEach`方法还可以有第二个参数，表示绑定处理函数内部的`this`对象。
 
-**（3.3）遍历的应用**
+#### **（3.3）遍历的应用**
 
 扩展运算符（`...`）内部使用`for...of`循环，所以也可以用于 Set 结构。
 
@@ -559,7 +559,7 @@ map.get(NaN) // 123
 
 Map 结构的实例有以下属性和操作方法。
 
-**（2.1）size 属性**
+#### **（2.1）size 属性**
 
 `size`属性返回 Map 结构的成员总数。
 
@@ -571,7 +571,7 @@ map.set('bar', false);
 map.size // 2
 ```
 
-**（2.2）set(key, value)**
+#### **（2.2）set(key, value)**
 
 `set`方法设置键名`key`对应的键值为`value`，然后返回整个 Map 结构。如果`key`已经有值，则键值会被更新，否则就新生成该键。
 
@@ -592,7 +592,7 @@ let map = new Map()
   .set(3, 'c');
 ```
 
-**（2.3）get(key)**
+#### **（2.3）get(key)**
 
 `get`方法读取`key`对应的键值，如果找不到`key`，返回`undefined`。
 
@@ -605,7 +605,7 @@ m.set(hello, 'Hello ES6!') // 键是函数
 m.get(hello)  // Hello ES6!
 ```
 
-**（2.4）has(key)**
+#### **（2.4）has(key)**
 
 `has`方法返回一个布尔值，表示某个键是否在当前 Map 对象之中。
 
@@ -622,7 +622,7 @@ m.has(262)           // true
 m.has(undefined)     // true
 ```
 
-**（2.5）delete(key)**
+#### **（2.5）delete(key)**
 
 `delete`方法删除某个键，返回`true`。如果删除失败，返回`false`。
 
@@ -635,7 +635,7 @@ m.delete(undefined)
 m.has(undefined)       // false
 ```
 
-**（2.6）clear()**
+#### **（2.6）clear()**
 
 `clear`方法清除所有成员，没有返回值。
 
@@ -773,7 +773,7 @@ map.forEach(function(value, key, map) {
 
 ### （4）与其他数据结构的互相转换
 
-**（4.1）Map 转为数组**
+#### **（4.1）Map 转为数组**
 
 前面已经提过，Map 转为数组最方便的方法，就是使用扩展运算符（`...`）。
 
@@ -785,7 +785,7 @@ const myMap = new Map()
 // [ [ true, 7 ], [ { foo: 3 }, [ 'abc' ] ] ]
 ```
 
-**（4.2）数组 转为 Map**
+#### **（4.2）数组 转为 Map**
 
 将数组传入 Map 构造函数，就可以转为 Map。
 
@@ -800,7 +800,7 @@ new Map([
 // }
 ```
 
-**（4.3）Map 转为对象**
+#### **（4.3）Map 转为对象**
 
 如果所有 Map 的键都是字符串，它可以无损地转为对象。
 
@@ -822,7 +822,7 @@ strMapToObj(myMap)
 
 如果有非字符串的键名，那么这个键名会被转成字符串，再作为对象的键名。
 
-**（4.4）对象转为 Map**
+#### **（4.4）对象转为 Map**
 
 ```
 function objToStrMap(obj) {
@@ -837,7 +837,7 @@ objToStrMap({yes: true, no: false})
 // Map {"yes" => true, "no" => false}
 ```
 
-**（4.5）Map 转为 JSON**
+#### **（4.5）Map 转为 JSON**
 
 Map 转为 JSON 要区分两种情况。一种情况是，Map 的键名都是字符串，这时可以选择转为对象 JSON。
 
@@ -863,7 +863,7 @@ mapToArrayJson(myMap)
 // '[[true,7],[{"foo":3},["abc"]]]'
 ```
 
-**（4.6）JSON 转为 Map**
+#### **（4.6）JSON 转为 Map**
 
 JSON 转为 Map，正常情况下，所有键名都是字符串。
 
